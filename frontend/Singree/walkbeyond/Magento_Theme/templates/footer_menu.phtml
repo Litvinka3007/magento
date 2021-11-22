@@ -1,7 +1,11 @@
-<div class="menu">
+<div class="menu" id="footer-menu" data-mage-init='{"example": {}}'>
     <div class="menu__column">
-        <h4><?php echo __('About Nintendove')?></h4>
-        <ul>
+        <div data-role="collapsible">
+            <div data-role="trigger">
+                <h4><?php echo __('About Nintendove')?></h4>
+            </div>
+        </div>
+        <ul data-role="content">
             <li><a href="#" title="<?php echo __('Company Info')?>"><?php echo __('Company Info')?></a></li>
             <li><a href="#" title="<?php echo __('Careers')?>"><?php echo __('Careers')?></a></li>
             <li><a href="#" title="<?php echo __('CSR Report')?>"><?php echo __('CSR Report')?></a></li>
@@ -9,8 +13,12 @@
         </ul>
     </div>
     <div class="menu__column">
-        <h4><?php echo __('Store Support')?></h4>
-        <ul>
+        <div data-role="collapsible">
+            <div data-role="trigger">
+                <h4><?php echo __('Store Support')?></h4>
+            </div>
+        </div>
+        <ul data-role="content">
             <li><a href="#" title="<?php echo __('Order Status')?>"><?php echo __('Order Status')?></a></li>
             <li><a href="#" title="<?php echo __('Shipping & Processing')?>"><?php echo __('Shipping & Processing')?></a></li>
             <li><a href="#" title="<?php echo __('Returns & Exchanges')?>"><?php echo __('Returns & Exchanges')?></a></li>
@@ -21,8 +29,12 @@
         </ul>
     </div>
     <div class="menu__column">
-        <h4><?php echo __('Product Information')?></h4>
-        <ul>
+        <div data-role="collapsible">
+            <div data-role="trigger">
+                <h4><?php echo __('Product Information')?></h4>
+            </div>
+        </div>
+        <ul data-role="content">
             <li><a href="#" title="<?php echo __('Product Support')?>"><?php echo __('Product Support')?></a></li>
             <li><a href="#" title="<?php echo __('Repair Help')?>"><?php echo __('Repair Help')?></a></li>
             <li><a href="#" title="<?php echo __('Product Warranty')?>"><?php echo __('Product Warranty')?></a></li>
@@ -32,3 +44,26 @@
         </ul>
     </div>
 </div>
+
+<script>
+    require([
+        'jquery',
+        'matchMedia',
+        'accordion'
+    ], function ($, mediaCheck) {
+        mediaCheck({
+            media: '(min-width: 768px)',
+            entry: $.proxy(function () {
+                $("#footer-menu").accordion("deactivate");
+            }, this),
+            exit: $.proxy(function () {
+                $("#footer-menu").accordion({
+                    "openedState": "active",
+                    "collapsible": true,
+                    "active": false,
+                    "multipleCollapsible": true,
+                })
+            }, this)
+        });
+    });
+</script>
