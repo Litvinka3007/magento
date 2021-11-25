@@ -1,4 +1,4 @@
-<div class="menu" id="footer-menu" data-mage-init='{"example": {}}'>
+<div class="menu" id="footer-menu" data-mage-init='{"accordion": {}}'>
     <div class="menu__column">
         <div data-role="collapsible">
             <div data-role="trigger">
@@ -44,26 +44,3 @@
         </ul>
     </div>
 </div>
-
-<script>
-    require([
-        'jquery',
-        'matchMedia',
-        'accordion'
-    ], function ($, mediaCheck) {
-        mediaCheck({
-            media: '(min-width: 768px)',
-            entry: $.proxy(function () {
-                $("#footer-menu").accordion("deactivate");
-            }, this),
-            exit: $.proxy(function () {
-                $("#footer-menu").accordion({
-                    "openedState": "active",
-                    "collapsible": true,
-                    "active": false,
-                    "multipleCollapsible": true,
-                })
-            }, this)
-        });
-    });
-</script>
