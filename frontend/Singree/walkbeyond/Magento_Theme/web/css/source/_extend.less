@@ -1,6 +1,64 @@
 @menu__font-color: #ffffff;
 @menu__transition: all 0.1s ease-out;
 & when (@media-common = true) {
+
+    .page-header {
+        .header.content {
+            display: flex;
+            align-items: self-start;
+
+            .logo {
+                clear: left;
+            }
+
+            .minicart-wrapper {
+                order: 0;
+                clear: right;
+            }
+
+            .wishlist  {
+                order: 1;
+                padding-left: 15px;
+
+                &:before {
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-size: 35px;
+                    line-height: 33px;
+                    color: #8f8f8f;
+                    content: '\e600';
+                    font-family: 'icons-blank-theme';
+                    margin: 0;
+                    vertical-align: top;
+                    display: inline-block;
+                    font-weight: normal;
+                    overflow: hidden;
+                    speak: none;
+                    text-align: center;
+                }
+
+                .counter.qty {
+                    background: #ff5501;
+                    color: #484848;
+                    height: 24px;
+                    line-height: 24px;
+                    border-radius: 2px;
+                    display: inline-block;
+                    margin: 3px 0 0;
+                    min-width: 18px;
+                    overflow: hidden;
+                    padding: 0 3px;
+                    text-align: center;
+                    white-space: normal;
+                }
+            }
+
+            .block-search {
+                order: 2;
+            }
+        }
+    }
+
     .page-footer {
         .block.newsletter {
             display: flex;
