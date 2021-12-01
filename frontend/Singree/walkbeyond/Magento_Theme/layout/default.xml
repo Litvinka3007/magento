@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceContainer name="page.wrapper">
+            <container name="my.container" as="myContainer" label="My Container" htmlTag="div" htmlClass="my-container" before="main.content">
+                <block name="wish" as="wish" template="Magento_Theme::wish.phtml" after="-" />
+            </container>
+        </referenceContainer>
+
         <referenceContainer name="footer">
             <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" before="-" template="Magento_Theme::footer_menu.phtml" />
         </referenceContainer>
