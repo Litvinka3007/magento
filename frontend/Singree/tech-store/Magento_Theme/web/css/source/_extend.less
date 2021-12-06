@@ -1,0 +1,84 @@
+@header-panel__background-color: #020202;
+
+& when (@media-common = true) {
+
+    .page-wrapper {
+        .page-header {
+            .panel.wrapper {
+                border: none;
+            }
+
+            .header.content {
+                display: flex;
+                align-items: center;
+                padding: 0;
+
+                .logo {
+                    margin: 0;
+                    clear: left;
+                    width: 34px;
+                    height: 41px;
+                }
+
+                .minicart-wrapper {
+                    margin-left: 30px;
+                    clear: right;
+                    order: 3;
+
+                    .action.showcart {
+                        &:before {
+                            position: relative;
+                            content: "";
+                            background: url('@{baseDir}Magento_Theme/images/jam_shopping-cart.svg') no-repeat;
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        .counter.qty {
+                            position: absolute;
+                            bottom: 60%;
+                            left: 65%;
+                            margin: 0;
+                            min-width: auto;
+                            width: 16px;
+                            height: 16px;
+                            padding: 0;
+                            border-radius: 100%;
+                            background: #0156FF;
+                            line-height: normal;
+
+                            .counter-number {
+                                text-shadow: none;
+                            }
+                        }
+                    }
+                }
+
+                .block-search {
+                    clear: right;
+                    order: 2;
+                }
+
+                .nav-sections {
+                    order: 1;
+                    margin: 0;
+
+                   .navigation {
+                       background: @color-white;
+                   }
+                }
+
+                .header.links {
+                    position: absolute;
+                    top: 74%;
+                    right: 5%;
+                    padding: 0;
+                    margin: 0;
+                    background: @color-white;
+                    list-style: none;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+}
