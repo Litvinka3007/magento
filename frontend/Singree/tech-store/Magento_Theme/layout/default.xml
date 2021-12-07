@@ -10,12 +10,6 @@
             </arguments>
         </referenceBlock>
 
-        <referenceBlock name="header">
-            <arguments>
-                <argument name="show_part" xsi:type="string">other</argument>
-            </arguments>
-        </referenceBlock>
-
         <referenceBlock name="store_language" remove="true" />
         <move element="navigation.sections" destination="header-wrapper" />
         <move element="header.links" destination="header-wrapper" />
