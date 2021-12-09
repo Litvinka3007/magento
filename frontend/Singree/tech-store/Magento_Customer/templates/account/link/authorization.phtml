@@ -11,12 +11,14 @@ if ($block->isLoggedIn()) {
     $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
     $loggedClassName = 'logged-in';
 } else {
-    $loggedClassName = '';
+    $loggedClassName = 'guest';
 }
 
 ?>
 <li class="authorization-link <?= $block->escapeHtmlAttr(__($loggedClassName)) ?>" data-label="<?= $block->escapeHtml(__('or')) ?>">
     <a <?= /* @noEscape */ $block->getLinkAttributes() ?><?= /* @noEscape */ $dataPostParam ?>>
-        <?= $block->escapeHtml($block->getLabel()) ?>
+        <?php if ($block->isLoggedIn()) :?>
+            <?= $block->escapeHtml($block->getLabel()) ?>
+        <?php endif ?>
     </a>
 </li>
