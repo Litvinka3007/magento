@@ -18,7 +18,12 @@
             <block name="search.icon" template="Magento_Theme::search-icon.phtml" before="minicart" />
         </referenceContainer>
 
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" before="-" template="Magento_Theme::footer_menu.phtml" />
+        </referenceContainer>
+
         <referenceBlock name="store_language" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
         <move element="navigation.sections" destination="header-wrapper" />
         <move element="header.links" destination="nav-icons" />
         <move element="minicart" destination="nav-icons" />

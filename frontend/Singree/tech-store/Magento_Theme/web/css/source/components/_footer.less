@@ -4,6 +4,71 @@
 
 & when (@media-common = true) {
 
+    .page-footer {
+        .footer {
+            &.content {
+                max-width: 1400px;
+                width: 100%;
+
+                .footer-menu {
+                    box-sizing: border-box;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    color: @footer__main-color;
+                    padding: 4.7rem 0 3.6rem 0;
+
+                    &__block {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        margin-right: 8rem;
+                        text-transform: capitalize;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                            text-transform: initial;
+                        }
+
+                        h4 {
+                            margin: 0;
+                            padding-bottom: 0.5rem;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                        }
+
+                        ul {
+                            margin: 0;
+                            padding: 1rem 0;
+
+                            li {
+                                font-size: 1.3rem;
+                                font-weight: 400;
+
+                                a {
+                                    color: @footer__main-color;
+
+                                    &:hover {
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .contacts-block {
+                        &__items {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //
