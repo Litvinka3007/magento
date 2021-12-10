@@ -1,0 +1,245 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .page-wrapper {
+        .page-header {
+            .panel.wrapper {
+                border: none;
+            }
+
+            .header.content {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2.5rem 0;
+                margin: auto;
+                max-width: 1400px;
+                width: 100%;
+                color: @color-black;
+
+                .logo {
+                    position: absolute;
+                    float: none;
+                    display: block;
+                    width: 34px;
+                    height: 41px;
+                    margin-bottom: 0;
+                }
+
+                .compare.wrapper {
+                    display: none;
+                }
+
+                .minicart-wrapper {
+                    margin-left: 3rem;
+                    float: none;
+                    z-index: 101;
+
+                    .action.showcart {
+                        &:before {
+                            position: relative;
+                            content: "";
+                            background: url('@{baseDir}Magento_Theme/images/jam_shopping-cart.svg') no-repeat;
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        .counter.qty {
+                            position: absolute;
+                            bottom: 60%;
+                            left: 65%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0;
+                            padding: 0;
+                            min-width: auto;
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 100%;
+                            background: @color-custom-blue;
+                            line-height: normal;
+                            font-size: 1rem;
+                            font-weight: 700;
+
+                            .counter-number {
+                                text-shadow: none;
+                            }
+                        }
+                    }
+                }
+
+                .block-search {
+                    float: none;
+                    display: none;
+
+                    .block-content {
+                        .form.minisearch {
+                            .field.search {
+                                input {
+                                    width: 100%;
+                                    height: 60px;
+                                    padding-left: 3rem;
+                                    border: none;
+                                    border-radius: 31px;
+                                    background: @color-custom-grey-light;
+                                    z-index: 50;
+
+                                    &::placeholder {
+                                        font-family: Poppins, sans-serif;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: @color-custom-grey;
+                                    }
+                                }
+                            }
+
+                            .actions {
+                                .action.search {
+                                    opacity: 1;
+                                    top: 23px;
+                                    right: 25px;
+
+                                    &:before {
+                                        position: relative;
+                                        content: "";
+                                        background: url('@{baseDir}Magento_Theme/images/loup.svg') no-repeat;
+                                        width: 17px;
+                                        height: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .block-search.visible {
+                    display: block;
+                    position: absolute;
+                    left: 8%;
+                    width: 80%;
+                    z-index: 200;
+                }
+
+                .nav-sections {
+                    order: 1;
+                    margin: 0;
+
+                    .navigation {
+                        background: @color-white;
+
+                        li {
+                            margin: 0 2.5rem 0 0;
+
+                            a {
+                                font-weight: 600;
+                                line-height: 21px;
+                                padding: 0;
+                            }
+
+                            &:last-of-type {
+                                box-sizing: border-box;
+                                padding: 0.8rem 2.6rem;
+                                margin: 0;
+                                border: 2px solid @color-custom-blue;
+                                border-radius: 50px;
+
+                                a {
+                                    color: @color-custom-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .nav-icons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    order: 3;
+                    margin-left: 9rem;
+
+                    .search-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 17px;
+                            height: 16px;
+                        }
+                    }
+                }
+
+                .header.links {
+                    padding: 0;
+                    margin: 0 0 0 3rem;
+                    background: @color-white;
+                    list-style: none;
+                    z-index: 100;
+
+                    .greet.welcome {
+                        .logged-in,
+                        .not-logged-in {
+                            display: none;
+                        }
+                    }
+
+                    .customer-welcome {
+                        .customer-menu {
+                            .authorization-link {
+                                display: list-item;
+                            }
+                        }
+
+                        .action.switch:after {
+                            color: @color-black;
+                            content: '\f2bd';
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 22px;
+                        }
+                    }
+
+                    .authorization-link.logged-in {
+                        display: none;
+                    }
+
+                    .authorization-link.guest {
+                        a {
+                            text-decoration: none;
+                        }
+
+                        a:before {
+                            color: @color-black;
+                            content: '\f2bd';
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
+
