@@ -19,7 +19,11 @@
         </referenceContainer>
 
         <referenceContainer name="footer">
-            <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" before="-" template="Magento_Theme::footer_menu.phtml" />
+            <container name="newsletter.content" as="newsletter.content" htmlTag="div" htmlClass="newsletter-content">
+                <block class="Magento\Framework\View\Element\Template" name="footer.subscribe" before="-" template="Magento_Theme::footer_subscribe.phtml" />
+            </container>
+
+            <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" after="footer.heading" template="Magento_Theme::footer_menu.phtml" />
         </referenceContainer>
 
         <referenceBlock name="store_language" remove="true" />
