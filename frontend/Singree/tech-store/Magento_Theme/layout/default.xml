@@ -24,6 +24,11 @@
             </container>
 
             <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" after="footer.heading" template="Magento_Theme::footer_menu.phtml" />
+
+            <container name="footer.bottom" as="footer.bottom" htmlTag="div" htmlClass="footer-bottom">
+                <block class="Magento\Framework\View\Element\Template" name="footer.social.icons" before="-" template="Magento_Theme::social_links.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="footer.payment.methods" after="footer.social.icons" template="Magento_Theme::payment_methods.phtml" />
+            </container>
         </referenceContainer>
 
         <referenceBlock name="store_language" remove="true" />
@@ -32,5 +37,6 @@
         <move element="header.links" destination="nav-icons" />
         <move element="minicart" destination="nav-icons" />
         <move element="top.search" destination="nav-icons" before="-" />
+        <move element="copyright" destination="footer.bottom" after="-" />
     </body>
 </page>
