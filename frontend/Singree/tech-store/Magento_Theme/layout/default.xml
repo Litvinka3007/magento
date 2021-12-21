@@ -31,6 +31,7 @@
             </container>
         </referenceContainer>
 
+<!--        <referenceContainer name="header.panel" remove="true" />-->
         <referenceBlock name="store_language" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
         <move element="navigation.sections" destination="header-wrapper" />
