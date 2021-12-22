@@ -1,7 +1,13 @@
 var config = {
-    "config": {
-        "mixins": {
-            "mage/accordion": {
+    map: {
+        '*': {
+            slick: 'Magento_Theme/js/slick.min'
+        }
+    },
+
+    config: {
+        mixins: {
+            'mage/accordion': {
                 'js/accordion-widget-mixin': true
             }
         }
