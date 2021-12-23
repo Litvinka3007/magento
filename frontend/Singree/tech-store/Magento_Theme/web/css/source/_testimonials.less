@@ -1,0 +1,47 @@
+@import '_slick.less';
+
+.testimonials-section__container {
+    margin-bottom: 6rem;
+
+    .testimonials-section {
+        box-sizing: border-box;
+        padding: 5rem 12rem;
+        max-width: 1160px;
+        width: 100%;
+        height: 310px;
+        background-color: @color-custom-grey-light;
+
+        .slider-slick {
+
+            .slider-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                font-weight: @font-weight__regular;
+
+                .quotes {
+                    transform: translateY(-30px);
+                    margin-right: 3rem;
+                    font-size: 9.6rem;
+                    color: @color-black;
+                }
+
+                .testimonial {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    &__text {
+                        font-size: 1.8rem;
+                    }
+
+                    &__author {
+                        align-self: flex-end;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

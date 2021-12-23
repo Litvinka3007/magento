@@ -4,5 +4,6 @@
         <css src="css/fontawesome/fontawesome.css"/>
         <css src="css/fontawesome/regular.css"/>
         <css src="css/fontawesome/solid.css"/>
+        <script src="Magento_Theme::js/slick-slider.js" async="async" />
     </head>
 </page>
