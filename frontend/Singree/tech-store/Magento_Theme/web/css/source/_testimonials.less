@@ -1,55 +1,130 @@
 @import '_slick.less';
 
-.testimonials-section__container {
-    margin-bottom: 6rem;
+//
+//  Common
+//  _____________________________________________
 
-    .testimonials-section {
-        position: relative;
-        box-sizing: border-box;
-        padding: 5rem 12rem;
-        max-width: 1160px;
-        width: 100%;
-        height: 310px;
-        background-color: @color-custom-grey-light;
+& when (@media-common = true) {
+    .page-bottom {
+        .content {
+            max-width: 345px;
 
-        .slider-slick {
-            .slider-content {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: flex-start;
-                font-weight: @font-weight__regular;
-                color: @color-black;
+            .testimonials-section__container {
+                margin-bottom: 2rem;
 
-                .quotes {
-                    transform: translateY(-30px);
-                    margin-right: 3rem;
-                    font-size: 9.6rem;
-                }
+                .testimonials-section {
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 2rem;
+                    max-width: 345px;
+                    width: 100%;
+                    height: 290px;
+                    background-color: @color-custom-grey-light;
 
-                .testimonial {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
+                    .slider-slick {
+                        .slider-content {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            font-weight: @font-weight__regular;
+                            color: @color-black;
 
-                    &__text {
-                        font-size: 1.8rem;
+                            .quotes {
+                                transform: translateY(-13px);
+                                margin-right: 1rem;
+                                font-size: 5rem;
+                            }
+
+                            .testimonial {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+
+                                &__text {
+                                    font-size: 1.4rem;
+                                }
+
+                                &__author {
+                                    align-self: flex-end;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
                     }
 
-                    &__author {
-                        align-self: flex-end;
-                        font-size: 1.4rem;
+                    .button-transparent {
+                        .button-transparent-outer-mixin();
+                        .button-transparent-inner-mixin();
+                        position: absolute;
+                        top: 80%;
+                        left: 6%;
                     }
                 }
             }
         }
+    }
+}
 
-        .button-transparent {
-            .button-transparent-outer-mixin();
-            .button-transparent-inner-mixin();
-            position: absolute;
-            top: 68%;
-            left: 11%;
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {}
+
+//
+//  Tablet
+//  _____________________________________________
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .page-bottom {
+        .content {
+            max-width: 1400px;
+
+            .testimonials-section__container {
+                margin-bottom: 6rem;
+
+                .testimonials-section {
+                    padding: 5rem 12rem;
+                    max-width: 1160px;
+                    height: 310px;
+
+                    .slider-slick {
+                        .slider-content {
+                            .quotes {
+                                transform: translateY(-30px);
+                                margin-right: 3rem;
+                                font-size: 9.6rem;
+                            }
+
+                            .testimonial {
+                                &__text {
+                                    font-size: 1.8rem;
+                                }
+
+                                &__author {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .button-transparent {
+                        top: 68%;
+                        left: 11%;
+                    }
+                }
+            }
         }
     }
 }
+
