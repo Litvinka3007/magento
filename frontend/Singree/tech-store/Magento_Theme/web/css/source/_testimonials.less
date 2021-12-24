@@ -78,6 +78,42 @@
 
 & when (@media-target = 'desktop'), (@media-target = 'all') {
     @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+        .page-bottom {
+            .content {
+                max-width: 728px;
+
+                .testimonials-section__container {
+                    margin-bottom: 4rem;
+
+                    .testimonials-section {
+                        padding: 3rem;
+                        max-width: 728px;
+                        height: 242px;
+
+                        .slider-slick {
+                            .slider-content {
+                                .quotes {
+                                    transform: translateY(-25px);
+                                    margin-right: 2rem;
+                                    font-size: 7rem;
+                                }
+
+                                .testimonial {
+                                    &__author {
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        .button-transparent {
+                            top: 68%;
+                            left: 4%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -102,7 +138,7 @@
                         .slider-content {
                             .quotes {
                                 transform: translateY(-30px);
-                                margin-right: 3rem;
+                                margin-right: 2.5rem;
                                 font-size: 9.6rem;
                             }
 
