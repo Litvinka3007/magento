@@ -4,6 +4,7 @@
     margin-bottom: 6rem;
 
     .testimonials-section {
+        position: relative;
         box-sizing: border-box;
         padding: 5rem 12rem;
         max-width: 1160px;
@@ -12,19 +13,18 @@
         background-color: @color-custom-grey-light;
 
         .slider-slick {
-
             .slider-content {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: flex-start;
                 font-weight: @font-weight__regular;
+                color: @color-black;
 
                 .quotes {
                     transform: translateY(-30px);
                     margin-right: 3rem;
                     font-size: 9.6rem;
-                    color: @color-black;
                 }
 
                 .testimonial {
@@ -42,6 +42,14 @@
                     }
                 }
             }
+        }
+
+        .button-transparent {
+            .button-transparent-outer-mixin();
+            .button-transparent-inner-mixin();
+            position: absolute;
+            top: 68%;
+            left: 11%;
         }
     }
 }
