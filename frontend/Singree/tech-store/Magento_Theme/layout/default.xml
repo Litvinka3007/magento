@@ -19,8 +19,6 @@
         </referenceContainer>
 
         <referenceContainer name="page.bottom">
-            <block name="slick_slider" template="Magento_Theme::slick-slider.phtml" before="-" />
-
             <block class="Magento\Cms\Block\Block" name="benefits_block">
                 <arguments>
                     <argument name="block_id" xsi:type="string">store-benefits-block</argument>
