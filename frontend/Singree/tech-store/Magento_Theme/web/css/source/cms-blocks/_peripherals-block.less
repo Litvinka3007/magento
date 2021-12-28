@@ -77,7 +77,27 @@
 
 & when (@media-target = 'desktop'), (@media-target = 'all') {
     @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+        .columns .column.main {
+            .peripherals-block__container {
+                display: block;
+                flex-direction: unset;
+                align-items: unset;
+                justify-content: unset;
+                max-width: 728px;
 
+                .peripherals-block__heading {
+                    max-width: initial;
+                    text-align: center;
+                }
+
+                .peripherals-block__items {
+                    max-width: 728px;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 10px;
+                    grid-row-gap: 20px;
+                }
+            }
+        }
     }
 }
 
