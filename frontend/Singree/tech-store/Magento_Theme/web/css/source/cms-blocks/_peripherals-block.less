@@ -3,28 +3,28 @@
         order: 3;
 
         .peripherals-block__container {
-            max-width: 345px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
+            max-width: 345px;
             color: @color-black;
 
             .peripherals-block__heading {
                 margin-bottom: 3rem;
-                font-size: 2rem;
                 max-width: 230px;
+                font-size: 2rem;
                 font-weight: @font-weight__semibold;
             }
 
             .peripherals-block__items {
-                max-width: 345px;
-                width: 100%;
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 justify-items: center;
                 grid-row-gap: 20px;
                 margin: 0 auto;
+                max-width: 345px;
+                width: 100%;
 
                 .peripherals-block__item {
                     display: flex;
@@ -46,13 +46,13 @@
                         text-align: center;
 
                         &-text {
-                            margin-bottom: 1rem;
-                            font-size: 1.2rem;
-                            line-height: 18px;
                             overflow: hidden;
                             display: -webkit-box;
                             -webkit-line-clamp: 7;
                             -webkit-box-orient: vertical;
+                            margin-bottom: 1rem;
+                            font-size: 1.2rem;
+                            line-height: 18px;
                         }
 
                         &-date {
