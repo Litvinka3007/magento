@@ -1,51 +1,61 @@
 & when (@media-common = true) {
-    .peripherals-block__container {
-        max-width: 1400px;
-        color: @color-black;
+    .columns .column.main {
+        order: 3;
 
-        .peripherals-block__heading {
-            margin-bottom: 2rem;
-            font-size: 2.2rem;
-            font-weight: @font-weight__semibold;
-        }
+        .peripherals-block__container {
+            max-width: 345px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: @color-black;
 
-        .peripherals-block__items {
-            max-width: 1165px;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-column-gap: 10px;
-            grid-row-gap: 20px;
-            margin: 0 auto;
+            .peripherals-block__heading {
+                margin-bottom: 3rem;
+                font-size: 2rem;
+                max-width: 230px;
+                font-weight: @font-weight__semibold;
+            }
 
-            .peripherals-block__item {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                width: 225px;
-                height: 322px;
-                border: none;
-                cursor: pointer;
+            .peripherals-block__items {
+                max-width: 345px;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                grid-row-gap: 20px;
+                margin: 0 auto;
 
-                .item__info {
+                .peripherals-block__item {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: center;
-                    padding: 1rem 2.5rem;
-                    font-weight: @font-weight__regular;
-                    text-align: center;
+                    width: 225px;
+                    height: 322px;
+                    border: none;
+                    cursor: pointer;
 
-                    &-text {
-                        margin-bottom: 1rem;
-                        font-size: 1.2rem;
-                        line-height: 18px;
-                    }
+                    .item__info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding: 1rem 2.5rem;
+                        font-weight: @font-weight__regular;
+                        text-align: center;
 
-                    &-date {
-                        font-size: 1rem;
-                        color: @color-custom-grey;
-                        line-height: 15px;
+                        &-text {
+                            margin-bottom: 1rem;
+                            font-size: 1.2rem;
+                            line-height: 18px;
+                        }
+
+                        &-date {
+                            font-size: 1rem;
+                            color: @color-custom-grey;
+                            line-height: 15px;
+                        }
                     }
                 }
             }
@@ -76,5 +86,25 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .columns .column.main {
+        .peripherals-block__container {
+            display: block;
+            flex-direction: unset;
+            align-items: unset;
+            justify-content: unset;
+            max-width: 1400px;
 
+            .peripherals-block__heading {
+                max-width: initial;
+                margin-bottom: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .peripherals-block__items {
+                max-width: 1165px;
+                grid-template-columns: repeat(5, 1fr);
+                grid-column-gap: 10px;
+            }
+        }
+    }
 }
