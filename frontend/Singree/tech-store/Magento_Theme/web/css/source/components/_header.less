@@ -7,6 +7,54 @@
         .page-header {
             .panel.wrapper {
                 border: none;
+
+                .store-info__container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: auto;
+                    padding: 1.3rem;
+                    max-width: 345px;
+                    width: 100%;
+
+                    .working-hours {
+
+                    }
+
+                    .address {
+
+                    }
+
+                    .contacts {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        .phone-number {
+                            margin-right: 1.6rem;
+                        }
+
+                        .social-links {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            a:first-of-type {
+                                margin-right: 1.3rem;
+                            }
+
+                            img {
+                                width: 18px;
+                                height: 18px;
+                                display: block;
+                            }
+                        }
+                    }
+                }
             }
 
             .header.content {
@@ -340,6 +388,24 @@
     @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
         .page-wrapper {
             .page-header {
+                .panel.wrapper {
+                    .store-info__container {
+                        max-width: 728px;
+
+                        .working-hours {
+
+                        }
+
+                        .address {
+
+                        }
+
+                        .contacts {
+
+                        }
+                    }
+                }
+
                 .header.content {
                     max-width: 728px;
 
@@ -404,6 +470,24 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
     .page-wrapper {
         .page-header {
+            .panel.wrapper {
+                .store-info__container {
+                    max-width: 1400px;
+
+                    .working-hours {
+
+                    }
+
+                    .address {
+
+                    }
+
+                    .contacts {
+
+                    }
+                }
+            }
+
             .header.content {
                 justify-content: space-between;
                 padding: 2rem 0;
@@ -432,6 +516,7 @@
                 .logo {
                     position: absolute;
                     order: 0;
+                    margin-left: 2.2rem;
                 }
 
                 .nav-sections {

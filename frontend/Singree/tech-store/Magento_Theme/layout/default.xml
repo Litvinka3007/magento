@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceContainer name="header.panel.wrapper">
+            <block name="before.header.block" template="Magento_Theme::before-header.phtml" before="-" />
+        </referenceContainer>
+
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
@@ -39,7 +43,7 @@
             </container>
         </referenceContainer>
 
-<!--        <referenceContainer name="header.panel" remove="true" />-->
+        <referenceContainer name="header.panel" remove="true" />
         <referenceBlock name="store_language" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
         <move element="navigation.sections" destination="header-wrapper" />
