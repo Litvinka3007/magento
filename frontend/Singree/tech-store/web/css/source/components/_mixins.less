@@ -19,3 +19,21 @@
     font-weight: @font-weight__semibold;
     color: @color-custom-blue;
 }
+
+.social-icons-mixin() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    a:first-of-type {
+        margin-right: 1.3rem;
+    }
+
+    img {
+        width: 18px;
+        height: 18px;
+        display: block;
+    }
+}
