@@ -1,8 +1,15 @@
 var config = {
     map: {
         '*': {
-            slick: 'Magento_Theme/js/slick.min'
-            // slider: 'Magento_Theme/js/slick-slider'
+            slick: 'js/slick.min',
+            slider1: 'js/slick-slider',
+            slider2: 'js/banner-slider',
+        }
+    },
+
+    shim: {
+        slick: {
+            deps: ['jquery']
         }
     },
 
