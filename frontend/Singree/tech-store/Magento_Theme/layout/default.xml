@@ -18,6 +18,10 @@
             <block name="search.icon" template="Magento_Theme::search-icon.phtml" before="minicart" />
         </referenceContainer>
 
+        <referenceContainer name="page.wrapper">
+            <container name="page-banner" as="page-banner" label="Banner Slider" htmlTag="div" htmlClass="banner-slider" htmlId="banner-slider" before="page.bottom.container" />
+        </referenceContainer>
+
         <referenceContainer name="page.bottom">
             <block class="Magento\Cms\Block\Block" name="benefits_block">
                 <arguments>

@@ -1,0 +1,122 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .carousel-container {
+        .owl-carousel {
+            .owl-stage-outer.owl-height {
+                .custom-slider__container {
+                    position: relative;
+                    box-sizing: border-box;
+                    margin: auto;
+                    width: 100%;
+                    max-height: 680px;
+                    background: @color-custom-dark;
+
+                    .custom-slider {
+                        max-width: 1380px;
+                        width: 100%;
+                        margin: auto;
+
+                        &__slide {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            max-width: 1380px;
+                            margin: auto;
+
+                            &-info {
+                                width: 34%;
+                                color: @color-white;
+
+                                .heading {
+                                    margin-bottom: 5rem;
+                                    font-size: 4.4rem;
+                                    font-weight: @font-weight__heavier;
+                                }
+
+                                .text {
+                                    font-size: 1.8rem;
+                                    font-weight: @font-weight__light;
+                                }
+
+                                p:nth-child(2) {
+                                    margin-bottom: 3rem;
+                                }
+
+                            }
+
+                            &-image {
+                                width: 66%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .owl-theme {
+            .owl-dots {
+                left: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 0;
+                padding-left: 0;
+
+                .owl-dot {
+                    margin-right: 1rem;
+                    padding: 0;
+                    width: 12px;
+                    height: 12px;
+                    border: none;
+                    border-radius: 50%;
+                    font-size: 0;
+                    background-color: @color-white;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+
+                .owl-dot.active {
+                    background-color: @color-custom-blue;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {}
+
+//
+//  Tablet
+//  _____________________________________________
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}

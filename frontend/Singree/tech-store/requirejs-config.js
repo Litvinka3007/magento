@@ -2,10 +2,12 @@ var config = {
     map: {
         '*': {
             slick: 'js/slick.min',
-            slider1: 'js/slick-slider',
-            slider2: 'js/banner-slider',
         }
     },
+
+    deps: [
+      "js/slick-slider"
+    ],
 
     shim: {
         slick: {
