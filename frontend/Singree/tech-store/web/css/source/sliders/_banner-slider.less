@@ -9,47 +9,47 @@
                 .custom-slider__container {
                     position: relative;
                     box-sizing: border-box;
-                    margin: auto;
                     width: 100%;
-                    max-height: 680px;
+                    max-height: 300px;
+                    margin: auto;
                     background: @color-custom-dark;
 
                     .custom-slider {
-                        max-width: 1380px;
+                        max-width: 375px;
                         width: 100%;
                         margin: auto;
+                        padding: 1rem;
 
                         &__slide {
                             display: flex;
                             flex-direction: row;
                             justify-content: center;
                             align-items: center;
-                            max-width: 1380px;
+                            max-width: 375px;
                             margin: auto;
 
                             &-info {
-                                width: 34%;
+                                width: 50%;
                                 color: @color-white;
 
                                 .heading {
-                                    margin-bottom: 5rem;
-                                    font-size: 4.4rem;
+                                    margin-bottom: 2rem;
+                                    font-size: 2rem;
                                     font-weight: @font-weight__heavier;
                                 }
 
                                 .text {
-                                    font-size: 1.8rem;
+                                    font-size: 1.2rem;
                                     font-weight: @font-weight__light;
                                 }
 
                                 p:nth-child(2) {
-                                    margin-bottom: 3rem;
+                                    margin-bottom: 2rem;
                                 }
-
                             }
 
                             &-image {
-                                width: 66%;
+                                width: 50%;
                             }
                         }
                     }
@@ -59,7 +59,8 @@
 
         .owl-theme {
             .owl-dots {
-                left: 10%;
+                left: 72%;
+                top: 85%;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
@@ -67,10 +68,10 @@
                 padding-left: 0;
 
                 .owl-dot {
-                    margin-right: 1rem;
-                    padding: 0;
                     width: 12px;
                     height: 12px;
+                    margin-right: 1rem;
+                    padding: 0;
                     border: none;
                     border-radius: 50%;
                     font-size: 0;
@@ -109,7 +110,30 @@
 
 & when (@media-target = 'desktop'), (@media-target = 'all') {
     @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+        .carousel-container {
+            .owl-carousel {
+                .owl-stage-outer.owl-height {
+                    .custom-slider__container {
+                        max-height: 300px;
 
+                        .custom-slider {
+                            max-width: 728px;
+
+                            &__slide {
+                                max-width: 728px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-theme {
+                .owl-dots {
+                    left: 16%;
+                    top: 85%;
+                }
+            }
+        }
     }
 }
 
@@ -118,5 +142,50 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .carousel-container {
+        .owl-carousel {
+            .owl-stage-outer.owl-height {
+                .custom-slider__container {
+                    max-height: 680px;
 
+                    .custom-slider {
+                        max-width: 1380px;
+                        padding: 0;
+
+                        &__slide {
+                            max-width: 1380px;
+
+                            &-info {
+                                width: 34%;
+
+                                .heading {
+                                    margin-bottom: 5rem;
+                                    font-size: 4.4rem;
+                                }
+
+                                .text {
+                                    font-size: 1.8rem;
+                                }
+
+                                p:nth-child(2) {
+                                    margin-bottom: 3rem;
+                                }
+                            }
+
+                            &-image {
+                                width: 66%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .owl-theme {
+            .owl-dots {
+                left: 10%;
+                top: 90%;
+            }
+        }
+    }
 }
